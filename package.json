@@ -1,0 +1,32 @@
+{
+  "name": "postman-halloween-cc-api",
+  "version": "1.0.0",
+  "description": "Postman Halloween Costume Contest API project",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajkhare05/hacktoberfest21-api-starter.git"
+  },
+  "keywords": [
+    "hacktober"
+  ],
+  "author": "Raj Khare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajkhare05/hacktoberfest21-api-starter/issues"
+  },
+  "homepage": "https://github.com/rajkhare05/hacktoberfest21-api-starter#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nanoid": "^3.1.28",
+    "nodemon": "^2.0.13",
+    "path": "^0.12.7",
+    "pg": "^8.7.1"
+  }
+}

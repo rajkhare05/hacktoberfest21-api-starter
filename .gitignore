@@ -1,0 +1,4 @@
+/node_modules
+.env
+# sample file for meta data and other info
+sample.yml
