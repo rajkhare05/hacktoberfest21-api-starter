@@ -66,7 +66,7 @@ router.get('/', async (req, res) => {
             costumeImgUrl: row.costumeimgurl,
             city: row.city,
             country: row.country,
-            votes: row.votes
+            votes: parseInt(row.votes)
         })
     ))
 
@@ -97,7 +97,7 @@ router.get('/:id', async (req, res) => {
         costumeImgUrl: row.costumeimgurl,
         city: row.city,
         country: row.country,
-        votes: row.votes
+        votes: parseInt(row.votes)
     }
 
     res.status(200).json(data)
@@ -164,7 +164,7 @@ router.patch('/:id/upvote', async (req, res) => {
             message: 'Contestant not found'
         })
 
-    const _votes = rawData.rows[0].votes + 1
+    const _votes = parseInt(rawData.rows[0].votes) + 1
 
     await pool.query(
         'UPDATE CONTESTANTS SET VOTES = VOTES + 1 WHERE ID = $1;'
